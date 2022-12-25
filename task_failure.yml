@@ -1,0 +1,27 @@
+---
+- name: Task Failure Demo
+  hosts: serverc
+  vars:
+    web_package: httpd
+    file_package: vsftpd
+    file_service: vsftpd
+
+  tasks:
+    - name: Attempt to set up a webserver
+      block:
+        - name: Install {{ web_package}} package
+          ansible.builtin.dnf:
+            name: "{{ web_package }}"
+            state: latest
+
+      rescue:
+        - name: Install {{ file_package }} package
+          ansible.builtin.dnf:
+            name: "{{ file_package }}"
+            state: latest
+
+      always: 
+        - name: Start {{ file_service }} service
+          ansible.builtin.service:
+            name: "{{ file_service }}"
+            state: started

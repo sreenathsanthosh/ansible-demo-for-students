@@ -1,0 +1,11 @@
+---
+- name: Use File module
+  hosts: servera, serverb
+  tasks:
+    - name: SELinux file context is set to defaults
+      ansible.builtin.file:
+        path: /home/student/test
+        seuser: _default
+        serole: _default
+        setype: _default
+        selevel: _default

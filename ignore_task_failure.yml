@@ -1,0 +1,14 @@
+---
+- name: Demo of ignore errors
+  hosts: all
+  ignore_errors: yes
+  tasks:
+    - name: task1
+      ansible.builtin.command:
+        cmd: ls
+    - name: task2
+      ansible.builtin.command:
+        cmd: notacommand
+    - name: task3
+      ansible.builtin.command:
+        cmd: uptime

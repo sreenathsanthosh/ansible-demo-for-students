@@ -1,0 +1,12 @@
+---
+- name: Use the copy module
+  hosts: servera, serverb
+  tasks:
+    - name: Copy a file to managed hosts and set the attributes
+      ansible.builtin.copy:
+        src: myfiles/test
+        dest: /home/student/test
+        owner: student
+        group: student
+        mode: u+rw,g-wx,o-rwx
+        setype: samba_share_t

@@ -1,0 +1,21 @@
+---
+- name: Install and start Apache HTTPD
+  hosts: servera
+  tasks:
+    - name: Install the latest version of Apache
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+      notify: restart httpd
+
+    - name: Copy File
+      ansible.builtin.copy:
+        content: "This is ansible playbook\n"
+        dest: /var/www/html/index.html
+
+  handlers:
+    - name: restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+        enabled: yes

@@ -1,0 +1,7 @@
+---
+- name: Test debugging
+  hosts: servera
+  tasks:
+    - name: Task to display a message.
+      ansible.builtin.debug:
+        msg: "Welcome to Red Hat Training"

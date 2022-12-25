@@ -1,0 +1,10 @@
+---
+- name : Install the packages
+  hosts: serverd
+  tasks:
+    - name: httpd & vsftpd packages are installed
+      ansible.builtin.dnf:
+       name: 
+        - httpd
+        - vsftpd
+       state: present

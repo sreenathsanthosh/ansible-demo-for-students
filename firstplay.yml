@@ -1,0 +1,20 @@
+---
+- name: Configure Webserver in servera
+  hosts: servera
+#  gather_facts: no
+  tasks:
+    - name: httpd package is installed
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+
+    - name: Test page is configured
+      ansible.builtin.copy:
+        content: "Test Page!\n"
+        dest: /var/www/html/index.html
+
+    - name: httpd enabled and running
+      ansible.builtin.service:
+        name: httpd
+        enabled: true
+        state: started

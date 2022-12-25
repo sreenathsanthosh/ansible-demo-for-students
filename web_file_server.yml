@@ -1,0 +1,7 @@
+---
+- name: Configure Web & File server
+  hosts: serverb
+
+  roles:
+    - apache
+    - fileserver

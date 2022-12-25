@@ -1,0 +1,10 @@
+---
+- name: Testing  when Condition
+  hosts: servera
+  vars:
+    http_on: false
+  tasks:
+   - name: Start http service based in the variable
+     ansible.builtin.debug:
+      msg: "The httpd will be started as the value of http_on is {{http_on}}"
+     when: http_on

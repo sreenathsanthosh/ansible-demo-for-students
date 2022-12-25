@@ -1,0 +1,71 @@
+---
+- name: Configure Webserver
+  hosts: serverb
+  tasks:
+    - name: httpd package is installed
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+
+    - name: firewalld package is installed
+      ansible.builtin.dnf:
+        name: firewalld
+        state: latest
+
+    - name: test html page is installed
+      ansible.builtin.copy:
+        content: "Welcome to Red Hat Training!\n"
+        dest: /var/www/html/index.html
+
+    - name: firewalld enabled and running
+      ansible.builtin.service:
+        name: firewalld
+        enabled: true
+        state: started
+
+    - name: firewalld permits access to httpd service
+      ansible.posix.firewalld:
+        service: http
+        permanent: true
+        state: enabled
+        immediate: yes
+
+    - name: httpd enabled and running
+      ansible.builtin.service:
+        name: httpd
+        enabled: true
+        state: started
+
+- name: Configure Fileserver
+  hosts: serverc
+  tasks:
+    - name: vsftpd package is installed
+      ansible.builtin.dnf:
+        name: vsftpd
+        state: latest
+
+    - name: firewalld package is installed
+      ansible.builtin.dnf:
+        name: firewalld
+        state: latest
+
+    - name: firewalld enabled and running
+      ansible.builtin.service:
+        name: firewalld
+        enabled: true
+        state: started
+
+    - name: firewalld permits access to ftp service
+      ansible.posix.firewalld:
+        service: ftp
+        permanent: true
+        state: enabled
+        immediate: yes
+
+    - name: vsftpd enabled and running
+      ansible.builtin.service:
+        name: vsftpd
+        enabled: true
+        state: started
+
+

@@ -1,0 +1,8 @@
+---
+- name: Remove Webserver in servera
+  hosts: servera
+  tasks:
+    - name: httpd package is removed
+      ansible.builtin.dnf:
+        name: httpd
+        state: absent

@@ -1,0 +1,8 @@
+---
+- name: Test synchronize module
+  hosts: servera
+  tasks:
+    - name: Synchronize file
+      ansible.builtin.synchronize:
+        src: test
+        dest: /tmp/test

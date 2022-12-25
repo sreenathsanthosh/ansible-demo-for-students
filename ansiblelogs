@@ -1,0 +1,133 @@
+2022-12-23 07:02:11,711 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:02:13,032 p=21 u=root n=ansible | PLAY [Configure Webserver in servera] ******************************************
+2022-12-23 07:02:13,049 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:02:14,590 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:02:14,612 p=21 u=root n=ansible | TASK [httpd package is installed] **********************************************
+2022-12-23 07:02:15,893 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:02:15,906 p=21 u=root n=ansible | TASK [Test page is configured] *************************************************
+2022-12-23 07:02:16,840 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:02:16,852 p=21 u=root n=ansible | TASK [httpd enabled and running] ***********************************************
+2022-12-23 07:02:17,750 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:02:17,779 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:02:17,780 p=21 u=root n=ansible | servera                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 07:33:19,711 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:33:20,851 p=21 u=root n=ansible | PLAY [Configure Webserver in servera] ******************************************
+2022-12-23 07:33:20,867 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:33:22,384 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:33:22,403 p=21 u=root n=ansible | TASK [httpd package is installed] **********************************************
+2022-12-23 07:33:23,506 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:33:23,518 p=21 u=root n=ansible | TASK [Test page is configured] *************************************************
+2022-12-23 07:33:24,390 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:33:24,403 p=21 u=root n=ansible | TASK [httpd enabled and running] ***********************************************
+2022-12-23 07:33:25,273 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:33:25,294 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:33:25,294 p=21 u=root n=ansible | servera                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 07:37:16,964 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:37:18,170 p=21 u=root n=ansible | PLAY [Demo checkmode] **********************************************************
+2022-12-23 07:37:18,185 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:37:19,600 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:37:19,622 p=21 u=root n=ansible | TASK [Copy a file] *************************************************************
+2022-12-23 07:37:20,567 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:37:20,578 p=21 u=root n=ansible | TASK [Task always in check mode] ***********************************************
+2022-12-23 07:37:21,089 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:37:21,111 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:37:21,111 p=21 u=root n=ansible | servera                    : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 07:39:33,864 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:39:35,145 p=21 u=root n=ansible | PLAY [Demo checkmode] **********************************************************
+2022-12-23 07:39:35,168 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:39:36,613 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:39:36,636 p=21 u=root n=ansible | TASK [Copy a file] *************************************************************
+2022-12-23 07:39:37,695 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:39:37,707 p=21 u=root n=ansible | TASK [Task always in check mode] ***********************************************
+2022-12-23 07:39:38,255 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:39:38,278 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:39:38,278 p=21 u=root n=ansible | servera                    : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 07:43:25,463 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:43:26,648 p=21 u=root n=ansible | PLAY [Install and start Apache httpd] ******************************************
+2022-12-23 07:43:26,663 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:43:28,050 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:43:28,072 p=21 u=root n=ansible | TASK [Install the latest version of Apache] ************************************
+2022-12-23 07:43:29,283 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:43:29,296 p=21 u=root n=ansible | TASK [Correct index.html is present] *******************************************
+2022-12-23 07:43:30,229 p=21 u=root n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/runner/.ansible/tmp/ansible-local-217qwn56s6/tmp9cicxn0h/index.j2[0m
+[0;32m[0m[0;36m@@ -0,0 +1,3 @@[0m
+[0;36m[0m[0;32m+Ansible managed[0m
+[0;32m[0m[0;32m+The default IPV4 address of servera.lab.example.com is 172.25.250.10 and hostname is servera[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m
+
+2022-12-23 07:43:30,230 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:43:30,241 p=21 u=root n=ansible | TASK [Start httpd service] *****************************************************
+2022-12-23 07:43:31,094 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:43:31,124 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:43:31,124 p=21 u=root n=ansible | servera                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 07:44:56,538 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 07:44:57,719 p=21 u=root n=ansible | PLAY [Install and start Apache httpd] ******************************************
+2022-12-23 07:44:57,734 p=21 u=root n=ansible | TASK [Gathering Facts] *********************************************************
+2022-12-23 07:44:59,098 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:44:59,118 p=21 u=root n=ansible | TASK [Install the latest version of Apache] ************************************
+2022-12-23 07:45:00,197 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:45:00,208 p=21 u=root n=ansible | TASK [Correct index.html is present] *******************************************
+2022-12-23 07:45:01,088 p=21 u=root n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after: /home/runner/.ansible/tmp/ansible-local-2110a_chzo/tmpn75umvh1/index.j2[0m
+[0;32m[0m[0;36m@@ -0,0 +1,3 @@[0m
+[0;36m[0m[0;32m+Ansible managed[0m
+[0;32m[0m[0;32m+The default IPV4 address of servera.lab.example.com is 172.25.250.10 and hostname is servera[0m
+[0;32m[0m[0;32m+[0m
+[0;32m[0m
+
+2022-12-23 07:45:01,088 p=21 u=root n=ansible | changed: [servera]
+2022-12-23 07:45:01,099 p=21 u=root n=ansible | TASK [Start httpd service] *****************************************************
+2022-12-23 07:45:01,914 p=21 u=root n=ansible | ok: [servera]
+2022-12-23 07:45:01,942 p=21 u=root n=ansible | PLAY RECAP *********************************************************************
+2022-12-23 07:45:01,942 p=21 u=root n=ansible | servera                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-12-23 02:45:50,115 p=8352 u=student n=ansible | servera | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2022-12-23 02:45:50,216 p=8352 u=student n=ansible | serverb | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2022-12-23 02:45:50,217 p=8352 u=student n=ansible | serverd | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2022-12-23 02:45:50,283 p=8352 u=student n=ansible | serverc | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2022-12-23 02:46:46,820 p=8425 u=student n=ansible | servera | CHANGED | rc=0 >>
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          447060       0    447060   0% /dev
+tmpfs             491772       0    491772   0% /dev/shm
+tmpfs             196712    8856    187856   5% /run
+/dev/vda4        9756652 1800036   7956616  19% /
+/dev/vda3         506528  163796    342732  33% /boot
+/dev/vda2         204580    7148    197432   4% /boot/efi
+tmpfs              98352       0     98352   0% /run/user/1000
+
+2022-12-23 02:47:13,240 p=8445 u=student n=ansible | servera | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:             960         239         466           9         254         571
+Swap:              0           0           0
+
+2022-12-23 11:18:54,395 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}
+2022-12-23 11:18:55,307 p=21 u=root n=ansible | [WARNING]: module ansible.builtin.firewall not found in: /home/runner/.ansible/
+plugins/modules:/usr/share/ansible/plugins/modules:/usr/lib/python3.9/site-
+packages/ansible/modules
+
+2022-12-23 11:19:01,377 p=16 u=root n=ansible | {"/home/student/project/collections/ansible_collections": {"cisco.ios": {"version": "4.2.0"}, "ansible.netcommon": {"version": "4.1.0"}, "ansible.utils": {"version": "2.8.0"}, "ansible.posix": {"version": "1.2.0"}, "community.crypto": {"version": "2.9.0"}, "redhat.rhel_system_roles": {"version": "1.19.3"}}}

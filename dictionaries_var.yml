@@ -1,0 +1,12 @@
+---
+- name: Package names being fetched from array
+  hosts: servera
+  vars:
+    pkg:
+     pkg1: httpd
+     pkg2: vsftpd
+     pkg3: chronyd
+  tasks:
+   - name: Display the pkg list
+     ansible.builtin.debug:
+        msg: "The packages to be installed are {{pkg.pkg1}}, {{pkg.pkg2}} and {{pkg.pkg3}}"

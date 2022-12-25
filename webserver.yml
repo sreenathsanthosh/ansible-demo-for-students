@@ -1,0 +1,6 @@
+---
+- name: Configure Webserver
+  hosts: servera
+
+  roles:
+    - apache

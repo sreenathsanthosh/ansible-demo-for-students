@@ -1,0 +1,10 @@
+---
+- name: Time Synchronization play
+  hosts: serverd
+  vars:
+    timesync_ntp_servers:
+      - hostname: classroom.example.com
+        iburst: yes
+
+  roles:
+    - redhat.rhel_system_roles.timesync

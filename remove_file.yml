@@ -1,0 +1,8 @@
+---
+- name: Use the file module to remove files
+  hosts: servera, serverb
+  tasks:
+    - name: Remove file from managed hosts
+      ansible.builtin.file:
+        path: /home/student/test
+        state: absent

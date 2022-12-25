@@ -1,0 +1,12 @@
+---
+- name: Print all the hardware facts
+  hosts: servera
+  gather_facts: no
+  tasks:
+    - name: Collect only hardware facts
+      ansible.builtin.setup:
+        gather_subset:
+          - '!all'
+          -  hardware
+    - ansible.builtin.debug:
+       var: ansible_facts

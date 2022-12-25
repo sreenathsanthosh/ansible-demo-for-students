@@ -1,0 +1,7 @@
+---
+- name: Demo for debug module
+  hosts: servera
+  tasks:
+    - name: Display free memory
+      ansible.builtin.debug:
+        msg: "Free memory for this system is {{ ansible_facts['memfree_mb'] }}"

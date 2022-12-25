@@ -1,0 +1,12 @@
+---
+- name: Test stat module
+  hosts: servera
+  tasks:
+    - name: Verify the checksum of a file
+      ansible.builtin.stat:
+        path: /home/student/test
+        checksum_algorithm: md5
+      register: result
+
+    - ansible.builtin.debug:
+       msg: "The checksum of the file is {{ result.stat.checksum }}"

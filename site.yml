@@ -1,0 +1,22 @@
+---
+- name: Install and start Apache httpd
+  hosts: servera
+  tasks:
+   - name: Install the latest version of Apache
+     ansible.builtin.dnf:
+      name: httpd
+      state: latest
+
+   - name: Correct index.html is present
+     ansible.builtin.template:
+      src: index.j2
+      dest: /var/www/html/index.html
+
+   - name: Start httpd service
+     ansible.builtin.service:
+      name: httpd
+      state: started
+      enabled: yes
+
+    
+

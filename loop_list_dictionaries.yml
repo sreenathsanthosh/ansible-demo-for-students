@@ -1,0 +1,14 @@
+---
+- name: Demo for loop over a list of dictionaries
+  hosts: servera
+  tasks:
+    - name: Users exist and are in the correct groups
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        state: present
+        groups: "{{ item.groups }}"
+      loop:
+        - name: alen
+          groups: wheel
+        - name: jacob
+          groups: root
